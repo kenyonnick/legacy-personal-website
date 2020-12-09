@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400&display=swap&subset=latin-ext');
+
+/* * {
+    border: thin solid red;
+} */
+
+:root {
+  --background-color: black;
+  --border-color: #888;
+  --text-color-primary: white;
+  --text-color-muted: #888;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 400;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    font-size: 14pt;
+}
+
+body, #root {
+  width: 100%;
+  height: 100%;
+  display: block;
+  color: white;
+  background-color: var(--background-color);
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  position: absolute;
+}
+
+#nav {
+    width: 100%;
+    height: 5rem;
+    font-size: 18pt;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--background-color);
+    z-index: 10;
+    border-bottom: thin solid var(--border-color);
+}
+
+#nav > h1 {
+    font-size: 32pt;
+    padding: 25px;
+    font-weight: 200;
+}
+
+#nav > #nav-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.nav-item {
+    padding: 25px;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    font-weight: 200;
+}
+
+.nav-stub-cheat {
+    height: 10%;
+}
+
+.content {
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    align-content: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    margin-bottom: 5%;
+}
+
+.content-group{
+    border: thin solid var(--border-color);
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin: 2rem;
+    flex-basis: 24rem;
+    max-width: 24rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-bottom: 0.75rem;
+}
+
+.content-group > * {
+    margin: 0.25rem 0rem;
+    padding: 0 1rem;
+}
+
+.content-img {
+    max-width: 100%;
+    height: 13.5rem;
+    max-height: 13.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content-title {
+  width: 100%;
+  border-top: thin solid var(--border-color);
+  padding-top: 0.75rem;
+}
+
+.content-date {
+    font-weight: 200;
+    color: var(--text-color-muted);
+}
+
+.content-group ul {
+    /* width: 100%; */
+    display: flex;
+    flex-direction: row;
+    list-style: disc;
+    list-style-position: inside;
+}
+
+.content-group ul li {
+  margin-right: 0.5rem;
+}
+
+.content-group ul li:first-child {
+  list-style: none;
+}
