@@ -78,6 +78,15 @@ body, #root {
     font-weight: 200;
 }
 
+.nav-item a,a:link,a:visited,a:hover,a:active {
+    text-decoration: none;
+    color: var(--text-color-primary);
+}
+
+.nav-item a:hover {
+    color: var(--text-color-muted);
+}
+
 .nav-stub-cheat {
     height: 10%;
 }
