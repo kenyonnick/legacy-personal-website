@@ -10,7 +10,7 @@ export const portfolioData = [
         ],
         "thumbnail": {
             "src" : "glitched_sphere_I.png",
-        }
+        },
     },
     {
         "title": "Demented",
@@ -107,6 +107,23 @@ export const portfolioData = [
         "thumbnail": {
             "src" : "dimension.png",
         }
+    },
+    {
+        "title": "Project H.E.A.R.T.",
+        "date": {
+            "year": 2017
+        },
+        "tags": [
+            "Game",
+            "First-Person",
+            "Virtual Reality",
+            "Unity"
+        ],
+        "thumbnail": {
+            "src" : "project_heart.jpg",
+        },
+        "creditedWork" : true,
+        "link": "https://projectheartvr.wordpress.com/"
     },
 
 ];

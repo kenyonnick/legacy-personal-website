@@ -8,11 +8,18 @@ class PortfolioItem extends React.Component {
         this.tags = props.data.tags;
         this.imageSource = "../images/thumbnails/" + props.data.thumbnail.src;
         this.imageAltText = props.data.thumbnail.src;
+        this.creditedWork = props.data.creditedWork;
+        this.link = props.data.link;
+
+        this.thirdRowText = this.date.year;
+        if(this.creditedWork){
+            this.thirdRowText += " - Credited Work";
+        }
     }
 
     render() {
         return (
-            <div className="content-group">
+            <a href={ this.link } target="_blank" className="content-group">
                 <img className="content-img" src={this.imageSource} alt={this.imageAltText} />
                 <h3 className="content-title">{this.title}</h3>
                 <ul>
@@ -20,8 +27,8 @@ class PortfolioItem extends React.Component {
                         return(<li>{tag}</li>);
                     })}
                 </ul>
-                <h4 className="content-date">{this.date.year}</h4>
-            </div>
+                <h4 className="content-date">{this.thirdRowText}</h4>
+            </a>
         );
     }
 }
