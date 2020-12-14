@@ -51,7 +51,8 @@ export const portfolioData = [
         ],
         "thumbnail": {
             "src" : "the_body_of_the_beast.png",
-        }
+        },
+        "link" : "https://www.amazon.com/Body-Beast-Game-Internal-Conflict/dp/1530932580"
     },
     {
         "title": "The Bridge",
@@ -64,7 +65,8 @@ export const portfolioData = [
         ],
         "thumbnail": {
             "src" : "the_bridge.png",
-        }
+        },
+        "link" : "https://www.youtube.com/watch?v=VBXzq4Uhz5s"
     },
     {
         "title": "USVRS",
