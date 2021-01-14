@@ -9,7 +9,7 @@ class PortfolioItem extends React.Component {
         this.imageSource = "../images/thumbnails/" + props.data.thumbnail.src;
         this.imageAltText = props.data.thumbnail.src;
         this.creditedWork = props.data.creditedWork;
-        this.link = props.data.link;
+        this.link = "/portfolio/" + this.props.data.id;
 
         this.thirdRowText = this.date.year;
         if(this.creditedWork){
@@ -19,7 +19,7 @@ class PortfolioItem extends React.Component {
 
     render() {
         return (
-            <a href={ this.link } target="_blank" className="content-group">
+            <a href={ this.link } className="content-group">
                 <img className="content-img" src={this.imageSource} alt={this.imageAltText} />
                 <h3 className="content-title">{this.title}</h3>
                 <ul>

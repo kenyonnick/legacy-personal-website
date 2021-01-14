@@ -13,9 +13,9 @@ class PortfolioGallery extends React.Component {
 
     render() {
         return(
-            <div class="content">
+            <div className="content">
                 {this.portfolio.map((item, index) => {
-                    return (<PortfolioItem data={item}/>);
+                    return (<PortfolioItem key={item.title} data={item}/>);
                 })}
             </div>
         );

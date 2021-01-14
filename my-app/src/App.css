@@ -9,6 +9,7 @@
   --border-color: #888;
   --text-color-primary: white;
   --text-color-muted: #888;
+  --glow-color: #00ffff88;
 }
 
 h1,
@@ -104,6 +105,8 @@ body, #root {
 
 .content-group{
     border: thin solid var(--border-color);
+    border-radius: 0.75rem;
+    /* box-shadow: 0 0 0.5rem #0ff; */
     flex-grow: 1;
     flex-shrink: 0;
     margin: 2rem;
@@ -115,6 +118,21 @@ body, #root {
     justify-content: flex-start;
     align-items: flex-start;
     padding-bottom: 0.75rem;
+}
+
+@keyframes live-glow {
+    0% { box-shadow: 0 0 0.5rem var(--glow-color); }
+    40% { box-shadow: 0 0 0.75rem var(--glow-color); }
+    60% { box-shadow: 0 0 0.75rem var(--glow-color); }
+    100% { box-shadow: 0 0 0.5rem var(--glow-color); }
+}
+
+.content-group:hover {
+    animation-name: live-glow;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    border-color: var(--glow-color);
 }
 
 .content-group > * {
